@@ -227,8 +227,8 @@
 </div>
 
 <div id="music-wrap"></div>
-<audio id="cancion" loop preload="auto" src="https://archive.org/download/78_bs-und-ntt-heart-and-soul_larry-clinton-and-his-orchestra-bea-wain-hoagy-carmi_gbia0011655b/HEART%20AND%20SOUL%20-%20Larry%20Clinton%20and%20his%20Orchestra.mp3"></audio>
-<button id="btn-musica" onclick="toggleMusica()">♪ Música</button>
+<audio id="cancion" loop preload="auto" src="https://archive.org/download/78_las-maanitas_mariachi-vargas-de-tecalitln_gbia0185839a/LAS%20MA%C3%91ANITAS%20-%20Mariachi%20Vargas%20de%20Tecalitl%C3%A1n.mp3"></audio>
+<button id="btn-musica" onclick="toggleMusica()">🎺 Las Mañanitas</button>
 
 <!-- ============ PASTEL ============ -->
 <div id="zona-pastel">
@@ -384,7 +384,7 @@ function abrir(){
 
 /* ============ MÚSICA ============ */
 const audioEl=document.getElementById('cancion');
-const YT_ID='wCDIYvFmgW8';
+const YT_ID='UCRoMx5MVFM';
 let puesta=false,sonando=false,usaYT=false,ok=false,ytFrame=null;
 document.getElementById('btn-musica').style.display='block';
 function ponerMusica(){
@@ -409,7 +409,7 @@ function toggleMusica(){
 }
 function btnMus(){
   const b=document.getElementById('btn-musica');
-  b.textContent=sonando?'♪ Pausar música':'♪ Música';
+  b.textContent=sonando?'🎺 Pausar música':'🎺 Las Mañanitas';
   b.classList.toggle('tocando',sonando);
 }
 
