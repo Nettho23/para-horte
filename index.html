@@ -286,7 +286,9 @@
 
     <p class="cap lento">Gracias por dejarme conocerte. Gracias por tu elegancia, por tu risa, por ese rojo tuyo y por ser tan buena persona en un mundo que muchas veces no lo merece. Ojalá algún día la vida nos deje coincidir del todo, sin prisas y sin distancias. Y si no llegara a pasar, igual habrá valido cada segundo — porque conocerte ya fue ganar.</p>
 
-    <p class="cap lento" style="text-align:center;font-style:italic;color:var(--oro-claro)">Cuídate mucho.<br>Y no se te olvide nunca lo que vales.</p>
+    <p class="cap lento">Y ya para terminar, lo más importante de toda esta carta, lo que de verdad quería decirte desde el principio: <strong>te quiero mucho, Horte.</strong> Muchísimo. Más de lo que te he dicho y más de lo que probablemente te imaginas. Sin condiciones, sin esperar nada a cambio, y sin que eso vaya a cambiar por más que pase el tiempo.</p>
+
+    <p class="cap lento" style="text-align:center;font-style:italic;color:var(--oro-claro)">Cuídate mucho.<br>Y no se te olvide nunca lo que vales…<br>ni lo mucho que te quiero.</p>
 
     <div class="firma lento">
       <div class="desp">Con todo el cariño que cabe en una pantalla, y un poco más,</div>
@@ -332,10 +334,10 @@
 </div>
 
 <div class="section">
-  <h2 class="lento">Dieciocho rosas rojas… y una azul</h2>
+  <h2 class="lento">Diecisiete rosas rojas… y una azul</h2>
   <p class="hint lento">Toca cada rosa. La azul déjala para el final 💙</p>
   <div class="jardin" id="jardin"></div>
-  <p class="contador" id="contador">0 de 19 rosas abiertas</p>
+  <p class="contador" id="contador">0 de 18 rosas abiertas</p>
   <div id="nota-rosa"></div>
 </div>
 
@@ -349,7 +351,7 @@
       tu elegancia, tu fuerza, tu rojo y tu enorme corazón.<br>
       Alguien que te quiso sin pedirte nada a cambio,<br>
       y que estuvo — y estará — orgulloso de ti.
-      <span class="grande">Siempre tuyo</span>
+      <span class="grande">Te quiero mucho, Horte</span>
     </div>
   </div>
 </div>
@@ -476,28 +478,32 @@ const MENSAJES=[
   ["Por tu corazón","Enorme. Demasiado, a veces. No dejes que te lo cambien."],
   ["Por hacerme reír","Sin proponértelo, y en los días en que más falta hacía."],
   ["Por ser tan tú","No imitas a nadie. Eres original y eso hoy vale oro."],
-  ["Por tu valentía","Encaras lo que da miedo. Eso es ser valiente de verdad."],
-  ["Por existir","Sinceramente. El mundo está mejor contigo aquí. Y yo también."]
+  ["Por existir","Sinceramente. El mundo está mejor contigo aquí. Y yo también. Te quiero mucho."]
 ];
-const AZUL=["La rosa azul","Dicen que se regalan 18 rosas rojas y una azul, y se dice esto:<br><br><em>«Te querré hasta que la última rosa se marchite.»</em><br><br>Y como la rosa azul nunca se marchita… ya sabes cuánto tiempo es.<br><br>Aunque no pueda estar contigo, esta rosa se queda contigo. Como yo. 💙"];
+const AZUL=["La rosa azul","Dicen que se regalan 17 rosas rojas y una azul, y se dice esto:<br><br><em>«Te querré hasta que la última rosa se marchite.»</em><br><br>Y como la rosa azul nunca se marchita… ya sabes cuánto tiempo es.<br><br>Te quiero mucho, Horte. Aunque no pueda estar contigo, esta rosa se queda contigo. Como yo. 💙"];
 
 function svgRosa(azul){
-  const c1=azul?'#7fa8f5':'#e63455', c2=azul?'#2f5fd0':'#b3122b', c3=azul?'#1b3a86':'#6b0f1e';
-  return `<svg viewBox="0 0 60 88" xmlns="http://www.w3.org/2000/svg">
-    <path d="M30 44 C30 58 30 66 30 84" stroke="#2f6b32" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M30 62 C20 58 13 62 11 70 C20 72 27 70 30 62 Z" fill="#3d7d3f"/>
-    <path d="M30 70 C40 66 47 70 49 78 C40 80 33 78 30 70 Z" fill="#2f6b32"/>
-    <circle cx="30" cy="26" r="19" fill="${c3}"/>
-    <path d="M30 8 C42 10 48 20 46 30 C44 40 36 45 30 44 C24 45 16 40 14 30 C12 20 18 10 30 8 Z" fill="${c2}"/>
-    <path d="M30 14 C39 15 43 22 42 29 C41 36 35 40 30 39 C25 40 19 36 18 29 C17 22 21 15 30 14 Z" fill="${c1}"/>
-    <path d="M30 19 C36 20 39 24 38 29 C37 33 33 35 30 34 C27 35 23 33 22 29 C21 24 24 20 30 19 Z" fill="${c2}"/>
-    <path d="M30 24 C33 24 35 27 34 29 C33 32 31 32 30 31 C29 32 27 32 26 29 C25 27 27 24 30 24 Z" fill="${c1}"/>
+  const c1=azul?'#a8c6ff':'#f2607e', c2=azul?'#4c7fe0':'#cf1f3c',
+        c3=azul?'#2d5bbf':'#9c0f26', c4=azul?'#1b3a86':'#65101f';
+  const p=(a,r)=>`<ellipse cx="40" cy="${34-r}" rx="${r*0.82}" ry="${r}" transform="rotate(${a} 40 34)"/>`;
+  return `<svg viewBox="0 0 80 112" xmlns="http://www.w3.org/2000/svg">
+    <path d="M40 58 C40 76 40 88 40 108" stroke="#2f6b32" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <path d="M40 80 C28 73 15 77 11 90 C24 95 35 90 40 80 Z" fill="#3d8040"/>
+    <path d="M40 91 C52 84 65 88 69 101 C56 106 45 101 40 91 Z" fill="#2f6b32"/>
+    <path d="M40 60 C35 60 31 56 29 51 C35 51 39 55 40 60 Z" fill="#3d8040"/>
+    <path d="M40 60 C45 60 49 56 51 51 C45 51 41 55 40 60 Z" fill="#3d8040"/>
+    <g fill="${c4}">${p(0,21)}${p(72,21)}${p(144,21)}${p(216,21)}${p(288,21)}</g>
+    <g fill="${c3}">${p(36,17)}${p(108,17)}${p(180,17)}${p(252,17)}${p(324,17)}</g>
+    <g fill="${c2}">${p(18,13)}${p(90,13)}${p(162,13)}${p(234,13)}${p(306,13)}</g>
+    <circle cx="40" cy="34" r="11" fill="${c2}"/>
+    <path d="M40 24 A 10 10 0 1 1 30 34 A 7 7 0 1 0 40 41 A 4 4 0 1 1 36 34"
+          fill="none" stroke="${c1}" stroke-width="3.2" stroke-linecap="round"/>
   </svg>`;
 }
 const jardin=document.getElementById('jardin');
-for(let i=0;i<19;i++){
+for(let i=0;i<18;i++){
   const d=document.createElement('div');
-  const esAzul=(i===18);
+  const esAzul=(i===17);
   d.className='rosa lento'+(esAzul?' azul':'');
   d.innerHTML=svgRosa(esAzul);
   d.onclick=()=>abrirRosa(i,d);
@@ -506,15 +512,15 @@ for(let i=0;i<19;i++){
 let abiertas=new Set();
 function abrirRosa(i,el){
   el.classList.add('abierta'); abiertas.add(i);
-  document.getElementById('contador').textContent=abiertas.size+' de 19 rosas abiertas';
-  const esAzul=(i===18), m=esAzul?AZUL:MENSAJES[i];
+  document.getElementById('contador').textContent=abiertas.size+' de 18 rosas abiertas';
+  const esAzul=(i===17), m=esAzul?AZUL:MENSAJES[i];
   const nota=document.getElementById('nota-rosa');
   nota.classList.toggle('azul',esAzul);
   nota.innerHTML='<span class="titulo">'+m[0]+'</span>'+m[1];
   nota.classList.add('show');
   nota.scrollIntoView({behavior:'smooth',block:'center'});
   lluviaPetalos(esAzul?45:8,esAzul);
-  if(esAzul&&abiertas.size===19)setTimeout(()=>lluviaPetalos(70),900);
+  if(esAzul&&abiertas.size===18)setTimeout(()=>lluviaPetalos(70),900);
 }
 
 /* ============ LABIOS ============ */
